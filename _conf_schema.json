@@ -1,0 +1,8 @@
+{
+  "master_uid": {
+    "type": "string",
+    "description": "主人的唯一 ID（QQ号等）",
+    "default": "",
+    "hint": "【必填】请输入你要接收通知的QQ号"
+  }
+}
