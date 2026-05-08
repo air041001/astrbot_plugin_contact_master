@@ -1,8 +1,8 @@
 name: astrbot_plugin_contact_master
-display_name: 跨界通讯器 (Contact Master)
-description: 赋予 LLM 主动联系主人的能力。支持跨平台 UMO 消息穿透。
+display_name: 跨界通讯器 增强(Contact Master)
+description: AstrBot 智能联系人网关 - 透明增强官方发送工具，支持自然语言寻址与上下文注入
 author: air
-version: 4.0.0
+version: 5.0.0
 repo: https://github.com/air041001/astrbot_plugin_contact_master 
 tags: ["工具", "管理"]
 support_platforms: ["aiocqhttp"] 
