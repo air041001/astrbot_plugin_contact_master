@@ -27,17 +27,19 @@
 
 原版的发信工具需要大模型记住极其复杂的 UMO 格式（比如 `default:FriendMessage:123456`），太容易翻车了。
 现在，你可以直接让大模型把群友存为联系人。以后只需要说：“给 **小王** 发个消息说我晚点到。”底层会自动把“小王”翻译成正确的 UMO 发出去。
+同时，支持联系人添加与删除。
 
 > <img width="785" height="251" alt="image" src="https://github.com/user-attachments/assets/f739fd81-dea9-4c5c-b207-e21ba544913e" />
 <img width="780" height="357" alt="image" src="https://github.com/user-attachments/assets/68e3b181-2781-46fb-935d-6dc9f5914aca" />
 <img width="792" height="231" alt="image" src="https://github.com/user-attachments/assets/46550a99-a869-4cef-8369-3d516364a5f6" />
+<img width="802" height="465" alt="image" src="https://github.com/user-attachments/assets/708dd288-5d61-4ef3-8ff0-a8671ad197a4" />
 
 
 
 ### 3. 👑 专属的求救通道
 
 依然保留了传统的“快捷联系主人”功能。如果遇到了什么紧急报错，大模型还是可以通过专属通道第一时间呼叫你。
-同时，本插件也做了删除联系人的操作，但我懒的测试就不单独列出来了
+
 ---
 
 ## 🛠️ 它是怎么工作的？(一点点技术细节)
@@ -53,7 +55,7 @@
 
 1. 把插件装进你的 AstrBot `plugins` 目录。
 2. 去 WebUI 的插件配置里填上你的 `master_uid`（填你的纯 QQ 号或者完整 UMO 都行）。
-3. **⚠️ 极其重要：务必重启 AstrBot 容器！**（因为涉及到挂载底层补丁，不重启会报错哦）。
+3. **⚠️ 极其重要：务必重启 AstrBot 容器！**（因为涉及到挂载底层补丁，不重启会报错哦，不过非docker的我没条件尝试，希望有人能补充）。
 
 **日常聊天用法：**
 
@@ -74,9 +76,8 @@
 
 欢迎 PR 或讨论：
 
-1. **主人回复回写**：监听主人私聊回复事件，将回复内容反向注入群聊会话的历史中，实现双向上下文同步。
-2. **多主人支持**：将 `master_uid` 扩展为列表，支持通知多个管理员。
-
+1. **多主人支持**：将 `master_uid` 扩展为列表，支持通知多个管理员。
+2.**没想好**。。
 ---
 
 **最后：**
