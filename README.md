@@ -1,8 +1,8 @@
 # 📞 AstrBot 通讯增强补丁 (Contact Master) v5.0.0
 
-> **一个为了治好大模型“失忆症”而诞生的隐形外挂。**
+> **一个为了治好大模型“失忆症”而诞生的隐形补丁。**
 
-## 📖 为什么会有这个大更新？
+## 起源
 
 起初，我写这个插件只是为了加个能随时给主人发消息的快捷工具。但在折腾的过程中，我发现 AstrBot 官方的 `send_message_to_user` 工具有一个让人非常头疼的痛点：
 
@@ -23,12 +23,12 @@
 
 
 
-### 2. 📇 重点功能！！：说人话，别背 UMO (自然语言联系人)
+### 2. 📇 重点功能！！：说人话，别背 UMO (自动解析自然语言为UMO格式)
 
 原版的发信工具需要大模型记住极其复杂的 UMO 格式（比如 `default:FriendMessage:123456`），太容易翻车了。
 现在，你可以直接让大模型把群友存为联系人。以后只需要说：“给 **小王** 发个消息说我晚点到。”底层会自动把“小王”翻译成正确的 UMO 发出去。
 同时，支持联系人添加与删除。
-
+图为早期为设置硬指令时期使用自然语言触发 当前版本测试效果见下文
 > <img width="785" height="251" alt="image" src="https://github.com/user-attachments/assets/f739fd81-dea9-4c5c-b207-e21ba544913e" />
 <img width="780" height="357" alt="image" src="https://github.com/user-attachments/assets/68e3b181-2781-46fb-935d-6dc9f5914aca" />
 <img width="792" height="231" alt="image" src="https://github.com/user-attachments/assets/46550a99-a869-4cef-8369-3d516364a5f6" />
@@ -55,15 +55,18 @@
 
 1. 把插件装进你的 AstrBot `plugins` 目录。
 2. 去 WebUI 的插件配置里填上你的 `master_uid`（填你的纯 QQ 号或者完整 UMO 都行）。
-3. **⚠️ 极其重要：务必重启 AstrBot 容器！**（因为涉及到挂载底层补丁，不重启会报错哦，不过非docker的我没条件尝试，希望有人能补充）。
 
 **日常聊天用法：**
 
 * 呼叫主人：“联系一下主人，就说测试跑通了。”
-* 存联系人：“把刚才跟我聊天的人存进通讯录，名字叫 运维老哥，ID是 123456。”
+![alt text](image.png)
+* 存联系人：/添加联系人 名字 qq号 群聊类型（不写默认私聊）
+![alt text](image-1.png)
 * 给别人发信：“用主动发送工具，给 运维老哥 发一句：服务器好像卡了。”
-* 看通讯录：“看下通讯录里现在有谁。”
-
+![alt text](image-2.png)
+![alt text](image-3.png)
+* 看通讯录：/查看联系人
+![alt text](image-4.png)
 ## 配置说明
 
 在 AstrBot WebUI 的「插件配置」面板中设置，或手动创建 `data/config/astrbot_plugin_contact_master_config.json`：
