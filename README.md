@@ -28,7 +28,7 @@
 原版的发信工具需要大模型记住极其复杂的 UMO 格式（比如 `default:FriendMessage:123456`），太容易翻车了。
 现在，你可以直接让大模型把群友存为联系人。以后只需要说：“给 **小王** 发个消息说我晚点到。”底层会自动把“小王”翻译成正确的 UMO 发出去。
 同时，支持联系人添加与删除。
-图为早期为设置硬指令时期使用自然语言触发 当前版本测试效果见下文
+**图为早期为设置硬指令时期使用自然语言触发 当前版本测试效果见下文**
 > <img width="785" height="251" alt="image" src="https://github.com/user-attachments/assets/f739fd81-dea9-4c5c-b207-e21ba544913e" />
 <img width="780" height="357" alt="image" src="https://github.com/user-attachments/assets/68e3b181-2781-46fb-935d-6dc9f5914aca" />
 <img width="792" height="231" alt="image" src="https://github.com/user-attachments/assets/46550a99-a869-4cef-8369-3d516364a5f6" />
