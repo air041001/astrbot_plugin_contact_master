@@ -23,7 +23,7 @@
 
 
 
-### 2. 📇 重点功能！！：说人话，别背 UMO (自动解析自然语言为UMO格式)
+### 2. 📇 重点功能：说人话，别背 UMO (自动解析自然语言为UMO格式)
 
 原版的发信工具需要大模型记住极其复杂的 UMO 格式（比如 `default:FriendMessage:123456`），太容易翻车了。
 现在，你可以直接让大模型把群友存为联系人。以后只需要说：“给 **小王** 发个消息说我晚点到。”底层会自动把“小王”翻译成正确的 UMO 发出去。
@@ -49,7 +49,7 @@
 
 ---
 
-## 🚀 怎么用？
+## 🚀安装
 
 **安装与配置：**
 
@@ -59,14 +59,19 @@
 **日常聊天用法：**
 
 * 呼叫主人：“联系一下主人，就说测试跑通了。”
-![alt text](image.png)
+<img width="797" height="255" alt="image" src="https://github.com/user-attachments/assets/f80f00d0-7ace-4eb3-85f1-22d5f3effdeb" />
+
 * 存联系人：/添加联系人 名字 qq号 群聊类型（不写默认私聊）
-![alt text](image-1.png)
+<img width="647" height="183" alt="image" src="https://github.com/user-attachments/assets/becbc6c3-643f-4d39-a13a-a9e1b22b5ee0" />
+<img width="643" height="131" alt="image" src="https://github.com/user-attachments/assets/f64f325c-5dae-4d6f-ade1-c1df1e265f73" />
+
 * 给别人发信：“用主动发送工具，给 运维老哥 发一句：服务器好像卡了。”
-![alt text](image-2.png)
-![alt text](image-3.png)
+<img width="647" height="180" alt="image" src="https://github.com/user-attachments/assets/6b0644f4-82c3-4e7c-872b-de89afa2882e" />
+<img width="434" height="329" alt="image" src="https://github.com/user-attachments/assets/62b36208-34ef-46e0-91b0-c90400ef9dcc" />
+
 * 看通讯录：/查看联系人
-![alt text](image-4.png)
+<img width="650" height="241" alt="image" src="https://github.com/user-attachments/assets/c1b948e2-a726-4efe-ad0d-c0113e40c901" />
+
 ## 配置说明
 
 在 AstrBot WebUI 的「插件配置」面板中设置，或手动创建 `data/config/astrbot_plugin_contact_master_config.json`：
@@ -85,7 +90,7 @@
 
 **最后：**
 写这个 v5.0.0 踩了不少坑，如果它刚好也解决了你遇到的上下文断层问题，欢迎点个 Star！有 Bug 随时提 Issue！但其实我还有很多场景没有测试，如有问题随时提issue。
-
+你要问能直接发消息的前提下有什么意义？可能只是一些话从会突然从bot口中说出来的一种小惊喜或仪式感吧
 ---
 
 
