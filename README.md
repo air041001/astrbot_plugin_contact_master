@@ -7,7 +7,7 @@
 起初，我写这个插件只是为了加个能随时给主人发消息的快捷工具contact_master。但在折腾的过程中，我发现AstrBot官方是有`send_message_to_user`的发送消息的工具，但它有一个让人非常头疼的点：
 
 **bot主动发完消息后，有时会忘了自己发了什么**
-如果你问它刚才发了什么，它经常会犯傻地回答：“系统显示发送成功了，但我看不到具体内容哦~”虽然这个工具后续重复测试其实是消息被包裹在tool call中[“#8051”](https://github.com/AstrBotDevs/AstrBot/issues/8051)，在人设作用不强的情况下能读取到发送内容，但对上下文融入并不强，为了彻底治好这个“发信失忆症”，同时避免大模型调用工具时产生混，我把这个插件重构成了一个**官方工具的透明增强补丁**，**主要目的还是优化官方send_messgae_to_user工具的使用方式**。
+如果你问它刚才发了什么，它经常会犯傻地回答：“系统显示发送成功了，但我看不到具体内容哦~”虽然这个工具后续重复测试其实是消息被包裹在tool call中[“#8051”](https://github.com/AstrBotDevs/AstrBot/issues/8051)，在人设作用不强的情况下能读取到发送内容，但对上下文融入并不强，为了彻底治好这个“发信失忆症”，同时避免大模型调用工具时产生混，我把这个插件重构成了一个**官方工具的透明增强补丁**，**主要目的还是优化官方send_message_to_user工具的使用方式**。
 
 ---
 
@@ -39,7 +39,8 @@
 
 **安装与配置：**
 
-1. 把插件装进你的 AstrBot `plugins` 目录。
+1.cd path\to\data\plugins
+git clone https://github.com/air041001/astrbot_plugin_contact_master
 2. 去 WebUI 的插件配置里填上你的 `master_uid`（填你的纯 QQ 号或者完整 UMO 都行）。
 
 **使用方法：**
@@ -60,7 +61,7 @@
 
 ## 配置说明
 
-在 AstrBot WebUI 的「插件配置」面板中设置，或手动创建 `data/config/astrbot_plugin_contact_master_config.json`：
+在 AstrBot WebUI 的「插件配置」面板中设置:
 
 | 配置项 | 说明 | 默认值 |
 | :--- | :--- | :--- |
