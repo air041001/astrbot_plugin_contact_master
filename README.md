@@ -39,8 +39,11 @@
 
 **安装与配置：**
 
-1.cd path\to\data\plugins
-git clone https://github.com/air041001/astrbot_plugin_contact_master
+1.bash
+  cd path\to\data\plugins
+bash
+  git clone https://github.com/air041001/astrbot_plugin_contact_master
+  
 2. 去 WebUI 的插件配置里填上你的 `master_uid`（填你的纯 QQ 号或者完整 UMO 都行）。
 
 **使用方法：**
